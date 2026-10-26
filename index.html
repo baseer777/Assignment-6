@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Application Form</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f4f7;
+        margin: 0;
+        padding: 20px;
+      }
+
+      .container {
+        width: 70%;
+        margin: auto;
+        background-color: white;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        text-align: center;
+        color: #1d3557;
+      }
+
+      p {
+        text-align: center;
+        color: #555;
+      }
+
+      fieldset {
+        border: 1px solid #b8c4d6;
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 20px;
+      }
+
+      legend {
+        color: #1d3557;
+        font-weight: bold;
+        padding: 5px 10px;
+      }
+
+      label {
+        display: block;
+        margin-top: 12px;
+        margin-bottom: 6px;
+        font-weight: bold;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="url"],
+      input[type="date"],
+      input[type="search"],
+      input[type="password"],
+      input[type="file"],
+      select,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+
+      textarea {
+        height: 100px;
+        resize: vertical;
+      }
+
+      input[type="radio"],
+      input[type="checkbox"] {
+        margin-right: 8px;
+      }
+
+      .option {
+        margin-top: 10px;
+      }
+
+      .option label {
+        display: inline;
+        font-weight: normal;
+        margin-right: 15px;
+      }
+
+      input:focus,
+      select:focus,
+      textarea:focus {
+        outline: none;
+        border-color: #1d3557;
+      }
+
+      input[type="submit"] {
+        width: 100%;
+        padding: 12px;
+        background-color: #1d3557;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #457b9d;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Job Application Form</h1>
+      <p>Fill out the form to apply for a job.</p>
+
+      <form>
+        <fieldset>
+          <legend>Personal Information</legend>
+
+          <label for="name">Full Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your full name"
+            required
+          />
+
+          <label for="email">Email Address:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+
+          <label for="phone">Phone Number:</label>
+          <input
+            type="text"
+            id="phone"
+            name="phone"
+            placeholder="Enter your phone number"
+            required
+          />
+
+          <label for="website">Website or Portfolio:</label>
+          <input
+            type="url"
+            id="website"
+            name="website"
+            placeholder="https://example.com"
+          />
+
+          <label for="dob">Date of Birth:</label>
+          <input type="date" id="dob" name="dob" required />
+        </fieldset>
+
+        <fieldset>
+          <legend>Job Details</legend>
+
+          <label for="position">Job Position:</label>
+          <select id="position" name="position" required>
+            <option value="">Select a position</option>
+            <option value="frontend">Frontend Developer</option>
+            <option value="backend">Backend Developer</option>
+            <option value="uiux">UI/UX Designer</option>
+            <option value="qa">QA Engineer</option>
+          </select>
+
+          <label>Preferred Work Location:</label>
+
+          <div class="option">
+            <input
+              type="radio"
+              id="onsite"
+              name="location"
+              value="On-site"
+              required
+            />
+            <label for="onsite">On-site</label>
+
+            <input type="radio" id="remote" name="location" value="Remote" />
+            <label for="remote">Remote</label>
+
+            <input type="radio" id="hybrid" name="location" value="Hybrid" />
+            <label for="hybrid">Hybrid</label>
+          </div>
+
+          <label>Skills:</label>
+
+          <div class="option">
+            <input type="checkbox" id="html" name="skills" value="HTML" />
+            <label for="html">HTML</label>
+
+            <input type="checkbox" id="css" name="skills" value="CSS" />
+            <label for="css">CSS</label>
+
+            <input
+              type="checkbox"
+              id="javascript"
+              name="skills"
+              value="JavaScript"
+            />
+            <label for="javascript">JavaScript</label>
+
+            <input type="checkbox" id="react" name="skills" value="React" />
+            <label for="react">React</label>
+
+            <input type="checkbox" id="node" name="skills" value="Node.js" />
+            <label for="node">Node.js</label>
+          </div>
+
+          <label for="resume">Resume Upload:</label>
+          <input type="file" id="resume" name="resume" required />
+
+          <label for="about">Write About Yourself:</label>
+          <textarea
+            id="about"
+            name="about"
+            placeholder="Write about yourself..."
+            required
+          ></textarea>
+        </fieldset>
+
+        <fieldset>
+          <legend>Extra Section</legend>
+
+          <label for="search">Search Your Favorite Tech Stack:</label>
+          <input
+            type="search"
+            id="search"
+            name="search"
+            placeholder="Search tech stack"
+            required
+          />
+
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter your password"
+            required
+          />
+
+          <label for="confirm">Confirm Password:</label>
+          <input
+            type="password"
+            id="confirm"
+            name="confirm"
+            placeholder="Confirm your password"
+            required
+          />
+        </fieldset>
+
+        <input type="submit" value="Submit Application" />
+      </form>
+    </div>
+  </body>
+</html>
